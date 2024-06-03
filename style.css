@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0D1117;
+
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+#time {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+}
+
+#time .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time .circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #4b4b4b;
+  stroke-width: 4px;
+  transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--color);
+  stroke-dasharray: 440;
+}
+
+#time div {
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.time-text {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.dots::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--color);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--color), 0 0 60px var(--color);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  border: none;
+  background: #04fc43;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #03a63c;
+}
+
+#lapList {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  overflow-y: auto;
+  max-height: 200px;
+  padding: 10px;
+  background: #161b22;
+  border-radius: 10px;
+}
+
+#lapList p {
+  padding: 5px 0;
+  border-bottom: 1px solid #2a2e35;
+}
+
+#lapList p:last-child {
+  border-bottom: none;
+}
