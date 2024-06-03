@@ -54,15 +54,15 @@ resetButton.addEventListener("click", () => {
   dotS.style.transform = `rotate(0deg)`;
   dotMS.style.transform = `rotate(0deg)`;
   startStopButton.textContent = "Start";
-  lapList.innerHTML = ""; // Clear lap list on reset
-  lapCounter = 1; // Reset lap counter
+  lapList.innerHTML = ""; 
+  lapCounter = 1; 
 });
 
 lapButton.addEventListener("click", () => {
   if (isRunning) {
     const now = new Date().getTime();
     const lapTime = elapsedTime + (now - startTime);
-    const formattedLapTime = formatTime(lapTime); // Format the lap time
+    const formattedLapTime = formatTime(lapTime); 
     const lapItem = document.createElement("p");
     lapItem.textContent = `Lap ${lapCounter}: ${formattedLapTime}`;
     lapList.appendChild(lapItem);
